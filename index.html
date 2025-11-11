@@ -195,6 +195,35 @@
     <h3>🧺 Your Cart</h3>
     <ul id="cartList"></ul>
     <p><b>Total Amount:</b> ₹<span id="total">0</span></p>
+    <button class="orderBtn" onclick="placeOrder()">📱 Order on WhatsApp</button>
+  </div>
+
+<!-- Payment Section starts here -->
+<section id="payment" style="margin:25px 10px; padding:18px; border:2px solid #ff6600; border-radius:14px; background-color:#fff8f0; text-align:center; box-shadow:0 3px 8px rgba(255,102,0,0.2);">
+  <h2 style="color:#ff6600; margin-bottom:10px;">💰 Secure Payment Options</h2>
+  <p style="font-size:16px; color:#333;">Pay easily through <strong>UPI</strong> or <strong>WhatsApp Pay</strong></p>
+  
+  <p style="font-size:17px; margin:8px 0;">
+    <strong>UPI ID:</strong> a.5125-4@waaxis<br>
+    <strong>Phone:</strong> +91 91540 95125
+  </p>
+
+  <img src="1000008080.png" alt="UPI QR Code - A Bhaskar" style="width:210px; margin:12px auto; display:block; border:2px solid #ff6600; border-radius:12px; background:#fff;">
+
+  <a href="https://wa.me/919154095125?text=Hello%2C%20I%20have%20sent%20the%20payment%20for%20my%20order." 
+     style="display:inline-block; margin-top:10px; padding:10px 20px; background-color:#ff6600; color:white; text-decoration:none; font-weight:bold; border-radius:30px;">
+     ✅ Confirm Payment on WhatsApp
+  </a>
+
+  <p style="font-size:14px; color:#444; margin:12px 0 6px;">
+    📸 After payment, please send a screenshot on WhatsApp for quick confirmation.
+  </p>
+  
+  <p style="font-size:12px; color:#888;">Powered by Unified Payments Interface (UPI)</p>
+</section>
+<!-- End Payment Section -->
+
+  <footer>
 
     <label for="custName"><b>Your Name:</b></label>
     <input type="text" id="custName" placeholder="Enter your name">
@@ -281,4 +310,5 @@ items.forEach((p,i)=>{
 
 </body>
 </html>
+
 
