@@ -18,24 +18,24 @@
     color: #111;
   }
   header {
-    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBhWOhzzmajeBbI63FHOpZ8dRxyE_Md3Xn42blFYV_DmMzoxeINKXvjhA&s');
-    background-size: cover;
-    background-position: center;
-    padding: 70px 20px;
+    position: relative;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
     text-align: center;
     color: #fff;
-    position: relative;
   }
-  header::after {
-    content: "";
+  header iframe {
     position: absolute;
-    left: 0; top: 0; right: 0; bottom: 0;
-    background: rgba(0, 0, 0, 0.45);
-    z-index: 0;
+    top:0; left:0;
+    width: 100%;
+    height: 100%;
+    z-index:0;
   }
   header .inner {
     position: relative;
-    z-index: 1;
+    z-index:1;
+    padding: 70px 20px 0 20px;
   }
   header h1 {
     margin: 0;
@@ -162,6 +162,10 @@
 <body>
 
 <header>
+  <iframe width="100%" height="300" 
+    src="https://www.youtube.com/embed/M275YP4pNj4?autoplay=1&mute=1&loop=1&playlist=M275YP4pNj4" 
+    title="Vana Bhojanam Food Banner" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+  </iframe>
   <div class="inner">
     <h1>NANDU CATERING</h1>
     <h2>VANA BHOJANAM FOOD</h2>
