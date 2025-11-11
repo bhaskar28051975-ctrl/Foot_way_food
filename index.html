@@ -33,12 +33,39 @@
     background: rgba(0, 0, 0, 0.45);
     z-index: 0;
   }
-  header .inner { position: relative; z-index: 1; }
-  header h1 { margin: 0; font-size: 28px; color: #ffe97f; }
-  header h2 { margin-top: 8px; font-weight: 700; font-size: 32px; color: #fff; }
-  header h3 { margin-top: 6px; font-weight: 500; font-size: 20px; color: #d9f7e9; }
-  header h4 { margin-top: 6px; font-weight: 400; font-size: 16px; color: #fff3b0; }
-  .container { max-width: 980px; margin: 30px auto; padding: 0 12px; }
+  header .inner {
+    position: relative;
+    z-index: 1;
+  }
+  header h1 {
+    margin: 0;
+    font-size: 28px;
+    letter-spacing: 1px;
+    color: #ffe97f;
+  }
+  header h2 {
+    margin-top: 8px;
+    font-weight: 700;
+    font-size: 32px;
+    color: #fff;
+  }
+  header h3 {
+    margin-top: 6px;
+    font-weight: 500;
+    font-size: 20px;
+    color: #d9f7e9;
+  }
+  header h4 {
+    margin-top: 6px;
+    font-weight: 400;
+    font-size: 16px;
+    color: #fff3b0;
+  }
+  .container {
+    max-width: 980px;
+    margin: 30px auto;
+    padding: 0 12px;
+  }
   .intro {
     background: var(--card-bg);
     padding: 14px;
@@ -61,15 +88,29 @@
     transition: transform 0.2s;
   }
   .card:hover { transform: translateY(-4px); }
-  .card img { width: 100%; height: 180px; object-fit: cover; }
-  .card .body { padding: 12px; flex: 1; }
+  .card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+  }
+  .card .body {
+    padding: 12px;
+    flex: 1;
+  }
   .card h3 { margin: 6px 0; font-size: 18px; color: var(--dark); }
   .card p { margin: 4px 0; color: #444; font-size: 14px; }
   .price { font-weight: 700; margin-top: 6px; }
   .btn {
-    background: var(--accent); color: #fff; padding: 9px 14px;
-    border-radius: 8px; text-decoration: none; font-weight: 600;
-    display: inline-block; margin-top: 8px; transition: background 0.3s; cursor: pointer;
+    background: var(--accent);
+    color: #fff;
+    padding: 9px 14px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-block;
+    margin-top: 8px;
+    transition: background 0.3s;
+    cursor: pointer;
   }
   .btn:hover { background: #045f47; }
   .cart {
@@ -79,17 +120,43 @@
     margin-top: 22px;
     box-shadow: 0 3px 10px rgba(0,0,0,0.1);
   }
-  footer { text-align: center; margin: 20px 0; color: #555; font-size: 14px; }
+  footer {
+    text-align: center;
+    margin: 20px 0;
+    color: #555;
+    font-size: 14px;
+  }
   select, button, input {
-    padding: 8px; border-radius: 6px; border: 1px solid #ccc;
-    font-size: 14px; margin-top: 6px; width: 100%;
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    margin-top: 6px;
+    width: 100%;
   }
   button.orderBtn {
-    background: var(--accent); color: #fff; border: none;
-    cursor: pointer; font-weight: 600; transition: 0.3s;
-    padding: 10px 16px; border-radius: 8px;
+    background: var(--accent);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s;
+    padding: 10px 16px;
+    border-radius: 8px;
   }
   button.orderBtn:hover { background: #045f47; }
+
+  /* Payment Section */
+  #payment {
+    display: none;
+    margin:25px 10px;
+    padding:18px;
+    border:2px solid #ff6600;
+    border-radius:14px;
+    background-color:#fff8f0;
+    text-align:center;
+    box-shadow:0 3px 8px rgba(255,102,0,0.2);
+  }
 </style>
 </head>
 <body>
@@ -104,78 +171,62 @@
 </header>
 
 <div class="container">
-  <div class="intro">
-    Welcome to <b>Vana Bhojanam Food!</b> 🍃  
-    Choose your favourite meals, select delivery point, and place your order directly via WhatsApp.
-    <hr style="margin:10px 0;">
-    <p style="font-size:15px; line-height:1.6; color:#064e3b;">
-      ప్రియమైన భక్తులారా,<br>
-      దయచేసి <b>వన భోజనమ్ ఫుడ్</b> తీసుకుని అలిపిరి నుండి తిరుమల వరకు ఉన్న అరణ్యప్రాంతంలో ఆహ్లాదకరమైన వాతావరణంలో భోజనం చేయండి.<br>
-      సాంప్రదాయ ఆంధ్ర వంటకాల రుచిని ఆస్వాదించి, ఈ పవిత్ర ప్రయాణంలో మరపురాని అనుభూతిని పొందండి.<br>
-      సుభ దర్శనం చేసుకొని సురక్షితంగా ఇంటికి చేరండి.
-    </p>
-  </div>
+  
+<div class="intro">
+  Welcome to <b>Vana Bhojanam Food!</b> 🍃  
+  Choose your favourite meals, select delivery point, and confirm your order to proceed for secure payment.
+  <hr style="margin:10px 0;">
+</div>
 
-  <div class="grid" id="menuGrid"></div>
+<div class="grid" id="menuGrid"></div>
 
-  <div class="cart">
-    <h3>🧺 Your Cart</h3>
-    <ul id="cartList"></ul>
-    <p><b>Total Amount:</b> ₹<span id="total">0</span></p>
-    <button class="orderBtn" onclick="placeOrder()">📱 Order on WhatsApp</button>
-  </div>
+<div class="cart">
+  <h3>🧺 Your Cart</h3>
+  <ul id="cartList"></ul>
+  <p><b>Total Amount:</b> ₹<span id="total">0</span></p>
 
-  <!-- 💰 Payment Section -->
-  <section id="payment" style="margin:25px 10px; padding:18px; border:2px solid #ff6600; border-radius:14px; background-color:#fff8f0; text-align:center; box-shadow:0 3px 8px rgba(255,102,0,0.2);">
-    <h2 style="color:#ff6600; margin-bottom:10px;">💰 Secure Payment Options</h2>
-    <p style="font-size:16px; color:#333;">Pay easily through <strong>UPI</strong> or <strong>WhatsApp Pay</strong></p>
+  <label for="custName"><b>Your Name:</b></label>
+  <input type="text" id="custName" placeholder="Enter your name">
 
-    <p style="font-size:17px; margin:8px 0;">
-      <strong>UPI ID:</strong> bhaskar28051975@oksbi<br>
-      <strong>Phone:</strong> +91 91540 95125
-    </p>
+  <label for="custPhone"><b>Phone Number:</b></label>
+  <input type="tel" id="custPhone" placeholder="Enter your phone number">
 
-    <img src="1000008080.png" alt="UPI QR Code - A Bhaskar"
-         style="width:210px; margin:12px auto; display:block; border:2px solid #ff6600; border-radius:12px; background:#fff;">
+  <label for="location"><b>Delivery Location:</b></label>
+  <select id="location">
+    <option value="">-- Select Delivery Point --</option>
+    <option value="Alipiri">Alipiri</option>
+    <option value="Sree Vari Metlu">Sree Vari Metlu</option>
+    <option value="TTD Free Bus Stop">TTD Free Bus Stop</option>
+  </select><br>
 
-    <a href="upi://pay?pa=bhaskar28051975@oksbi&pn=FootWayFood&cu=INR&tn=Food%20Order"
-       style="display:inline-block; margin-top:12px; padding:12px 26px; background-color:#28a745; color:#fff; text-decoration:none; font-weight:bold; border-radius:30px;">
-       💵 Pay Now via UPI
-    </a>
+  <button class="orderBtn" onclick="confirmOrder()">✅ Confirm Order</button>
+</div>
 
-    <a href="https://wa.me/919154095125?text=Hello%2C%20I%20have%20sent%20the%20payment%20for%20my%20order."
-       style="display:inline-block; margin-top:10px; padding:10px 20px; background-color:#ff6600; color:white; text-decoration:none; font-weight:bold; border-radius:30px;">
-       ✅ Confirm Payment on WhatsApp
-    </a>
+<!-- Payment Section -->
+<section id="payment">
+  <h2 style="color:#ff6600; margin-bottom:10px;">💰 Secure Payment</h2>
+  <p style="font-size:16px; color:#333;">Pay using <strong>UPI</strong> or <strong>WhatsApp Pay</strong></p>
+  
+  <p style="font-size:17px; margin:8px 0;">
+    <strong>UPI ID:</strong> bhaskar28051975@oksbi<br>
+    <strong>Phone:</strong> +91 91540 95125
+  </p>
 
-    <p style="font-size:14px; color:#444; margin:12px 0 6px;">
-      📸 After payment, please send a screenshot on WhatsApp for quick confirmation.
-    </p>
-    <p style="font-size:12px; color:#888;">Powered by Unified Payments Interface (UPI)</p>
-  </section>
+  <img src="1000008080.png" alt="UPI QR Code" style="width:210px; margin:12px auto; display:block; border:2px solid #ff6600; border-radius:12px; background:#fff;">
 
-  <footer>
-    <label for="custName"><b>Your Name:</b></label>
-    <input type="text" id="custName" placeholder="Enter your name">
+  <a href="upi://pay?pa=bhaskar28051975@oksbi&pn=VanaBhojanamFood&cu=INR&tn=Food%20Order"
+     style="display:inline-block; margin-top:12px; padding:12px 26px; background-color:#28a745; color:#fff; text-decoration:none; font-weight:bold; border-radius:30px;">
+     💵 Pay Now
+  </a>
 
-    <label for="custPhone"><b>Phone Number:</b></label>
-    <input type="tel" id="custPhone" placeholder="Enter your phone number">
+  <button class="orderBtn" onclick="sendOrder()">📱 Send Order on WhatsApp</button>
+  <p style="font-size:12px; color:#888; margin-top:10px;">Powered by Unified Payments Interface (UPI)</p>
+</section>
 
-    <label for="location"><b>Delivery Location:</b></label>
-    <select id="location">
-      <option value="">-- Select Delivery Point --</option>
-      <option value="Alipiri">Alipiri</option>
-      <option value="Sree Vari Metlu">Sree Vari Metlu</option>
-      <option value="TTD Free Bus Stop">TTD Free Bus Stop</option>
-    </select><br>
-    
-    <button class="orderBtn" onclick="placeOrder()">📱 Order on WhatsApp</button>
-  </footer>
-
-  <footer>
-    Payment: Cash / WhatsApp | Order Helpline: 9154095125 <br>
-    Powered by <b>BR Info Pvt Ltd</b>
-  </footer>
+<footer>
+  Payment: Cash / WhatsApp | Order Helpline: 9154095125 <br>
+  Powered by <b>BR Info Pvt Ltd</b>
+</footer>
 </div>
 
 <script>
@@ -208,7 +259,7 @@ function addToCart(index){
   updateCart();
 }
 
-function placeOrder(){
+function confirmOrder(){
   const name = document.getElementById('custName').value.trim();
   const phoneInput = document.getElementById('custPhone').value.trim();
   const location = document.getElementById('location').value;
@@ -216,9 +267,18 @@ function placeOrder(){
   if(!name){alert("Please enter your name!");return;}
   if(!phoneInput){alert("Please enter your phone number!");return;}
   if(!location){alert("Please select a delivery location!");return;}
+
+  document.getElementById('payment').style.display = 'block';
+  window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+}
+
+function sendOrder(){
+  const name = document.getElementById('custName').value.trim();
+  const phoneInput = document.getElementById('custPhone').value.trim();
+  const location = document.getElementById('location').value;
   const list = cart.map(i=>`• ${i.name} (₹${i.price})`).join('%0A');
   const total = document.getElementById('total').textContent;
-  const message = `🌿 VANA BHOJANAM ORDER 🌿%0A%0A👤 Name: ${name}%0A📞 Phone: ${phoneInput}%0A📍 Location: ${location}%0A%0A${list}%0A%0ATotal: ₹${total}%0AThank you for choosing Nandu Catering!`;
+  const message = `🌿 VANA BHOJANAM ORDER 🌿%0A%0A👤 Name: ${name}%0A📞 Phone: ${phoneInput}%0A📍 Location: ${location}%0A%0A${list}%0A%0ATotal: ₹${total}%0A✅ Payment Completed.`;
   window.open(`https://wa.me/${phone}?text=${message}`,'_blank');
 }
 
